@@ -18,28 +18,59 @@ from art import logo
 #     print(key)
 #     print(programming_dictionary[key])
 
-student_scores = {
-    "Harry" : 81,
-    "Ron": 78,
-    "Hermione": 99,
-    "Draco": 74,
-    "Neville": 62,
-}
+# student_scores = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62,
+# }
+#
+# student_grades = {}
+#
+# for student in student_scores:
+#     if 90 < student_scores[student] <= 100:
+#         student_grades[student] = "Outstanding"
+#     elif 80 < student_scores[student] <= 90:
+#         student_grades[student] = "Exceeds Expectations"
+#     elif 70 < student_scores[student] <= 80:
+#         student_grades[student] = "Acceptable"
+#     else:
+#         student_grades[student] = "Fail"
+#
+# print(student_grades)
 
-student_grades = {}
+# Nesting Lists and Dictionaries
 
-for student in student_scores:
-    if 90 < student_scores[student] <= 100:
-        student_grades[student] = "Outstanding"
-    elif 80 < student_scores[student] <= 90:
-        student_grades[student] = "Exceeds Expectations"
-    elif 70 < student_scores[student] <= 80:
-        student_grades[student] = "Acceptable"
-    else:
-        student_grades[student] = "Fail"
-
-print(student_grades)
-
+# travel_log = [
+#     {
+#         "country": "France",
+#         "cities_visited": ["Paris", "Lille", "Trier", "Dijon"],
+#         "total_visits": 12
+#     },
+#     {
+#         "country": "Germany",
+#         "cities_visited": ["Landstuhl", "Stuttgart", "Hamburg"],
+#         "total_visits": 30
+#     },
+#     {
+#         "country": "New Zealand",
+#         "cities_visited": ["Auckland", "Rotorua", "Taupo"],
+#         "total_visits": 1
+#     },
+# ]
+#
+#
+# def add_new_country(name, city, visits):
+#     new_country = {}
+#     new_country["country"] = name
+#     new_country["cities_visited"] = city
+#     new_country["total_visits"] = visits
+#     travel_log.append(new_country)
+#
+#
+# add_new_country("Russia", ["Moscow", "Saint Petersburg"], 2)
+# print(travel_log)
 
 # print(logo)
 # sleep(0.75)
