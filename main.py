@@ -72,13 +72,36 @@ from art import logo
 # add_new_country("Russia", ["Moscow", "Saint Petersburg"], 2)
 # print(travel_log)
 
-# print(logo)
-# sleep(0.75)
-# print("Welcome to the Silent Auction Program.")
-# sleep(0.5)
-# name = input("What is your name?\n")
-# sleep(0.15)
-# print(f"Welcome, {name}")
-# sleep(0.5)
-# bid = input("What is your bid on this item? \n$")
-# other_bidders = input("Are there any other bidders? Type 'yes' or 'no'\n")
+print(logo)
+sleep(0.75)
+print("Welcome to the Silent Auction Program.")
+sleep(0.5)
+
+bids = {}
+end_of_bids = False
+
+
+def highest_bidder(bidding_war):
+    highest_bid = 0
+    winner = ""
+    for bidder in bidding_war:
+        bid_amt = bidding_war[bidder]
+        if bid_amt > highest_bid:
+            highest_bid = bid_amt
+            winner = bidder
+    print(f"The winner of this item is {winner} with a bid of ${highest_bid}")
+
+
+while not end_of_bids:
+    name = input("What is your name?\n")
+    sleep(0.15)
+    print(f"Welcome, {name}")
+    sleep(0.5)
+    bid = int(input("What is your bid on this item? \n$"))
+    bids[name] = bid
+    other_bidders = input("Are there any other bidders? Type 'yes' or 'no'\n")
+    if other_bidders.lower() == 'no':
+        end_of_bids = True
+        highest_bidder(bids)
+    else:
+        end_of_bids == "yes"
